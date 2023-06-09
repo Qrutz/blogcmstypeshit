@@ -29,7 +29,10 @@ export default async function Home() {
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
       <div className='flex flex-col items-center justify-center'>
         {posts.map((post: any) => (
-          <div className='flex flex-col items-center  p-4 bg-slate-200 '>
+          <div
+            key={post.title}
+            className='flex flex-col items-center  p-4 bg-slate-200 '
+          >
             <h2>Title: {post.title}</h2>
             <p>Body: {post.body}</p>
             <span className='flex gap-2 items-center '>
